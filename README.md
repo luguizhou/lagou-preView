@@ -43,5 +43,11 @@ var pewView = new lg.Widgets.PreView(options);
 ```
 ###html
 ```html
-<div data-controltype="PreView" data-propertyname="myPreViewTest"></div>
+    <link rel="stylesheet" href="demo-storm.css" type="text/css"/>
+    <script src="build/pdf.js"></script>
+    <script>
+        PDFJS.workerSrc = 'build/pdf.worker.js';
+    </script>
+    <script src="demo-storm.js"></script>
+    <div data-controltype="PreView" data-propertyname="myPreViewTest"></div>
 ```
