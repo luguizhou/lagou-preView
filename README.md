@@ -4,14 +4,14 @@
 #使用方法 
 ##新建方法
 ###'javascript'
-`"javascript
+```javascript
 var options = {
         selector:'myPreViewTest',
         dataSource:mockData.PDF //数据源
     };
 var pewView = new lg.Widgets.PreView(options);
-`"
+```
 ###'html'
-`"html
+```html
 <div data-controltype="PreView" data-propertyname="myPreViewTest"></div>
-`"
+```
