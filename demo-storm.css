@@ -1,0 +1,78 @@
+.preview-toolbar{
+
+}
+.preview-toolbar>div{
+    border: 1px solid #cdcdcd;
+    padding: 4px 6px;
+    margin: 10px;
+    width: 60px;
+    cursor: pointer;
+}
+.preview-viewbox{
+    border:1px solid #cdcdcd;
+    width:500px;
+    height: 500px;
+    overflow: auto;
+}
+.preview-viewbox canvas,.preview-viewbox img{
+    width: 100%;
+}
+
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.page {
+    background: red;
+    width: 612px;
+    height: 792px;
+    margin-bottom: 2px;
+}
+
+#print {
+    margin-left: 50px;
+}
+
+@supports ((size:A4) and (size:1pt 1pt)) {
+    @page {
+        size: 612pt 792pt;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #print {
+        display: block;
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-left: 0px;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    #print * {
+        visibility: visible;
+    }
+
+    .page {
+        margin-bottom: 0px;
+    }
+
+    #print > div {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+}
